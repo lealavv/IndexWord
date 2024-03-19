@@ -101,10 +101,10 @@ public class Main
             latch.await();
 
             // Выводим индексы слова "Пьер"
-            System.out.println("Индексы всех вхождений слова \"Пьер\" в романе \"Война и мир\": " + queue);
             FileWriter writer = new FileWriter("src/main/resources/output.txt");
-            for (Integer item : queue) {
-                writer.write(item + "\n");
+            while (!queue.isEmpty()) {
+                System.out.println(queue.poll());
+                writer.write(queue.poll() + "\n");
             }
             System.out.println("Данные записаны в файл output.txt");
 
