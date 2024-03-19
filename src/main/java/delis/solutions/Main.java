@@ -103,7 +103,6 @@ public class Main
             // Выводим индексы слова "Пьер"
             FileWriter writer = new FileWriter("src/main/resources/output.txt");
             while (!queue.isEmpty()) {
-                System.out.println(queue.poll());
                 writer.write(queue.poll() + "\n");
             }
             System.out.println("Данные записаны в файл output.txt");
